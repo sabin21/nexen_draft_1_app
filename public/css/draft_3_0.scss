@@ -1,0 +1,152 @@
+.main{
+  position: relative; width:calc(100% - 400px); height: 100%; min-height: 1200px; 
+  margin-left: 400px;
+  background-color: #E6EBED;
+}
+
+/*----------------*/
+.overlay{
+  display: block; width:100%; height:100vh;
+  position: fixed; top:0; left:0; z-index: -1;
+  // -webkit-backdrop-filter: blur(80px);
+  // backdrop-filter: blur(80px);
+  &::before{
+    content:''; display: block; top:0; left:0; opacity: 0.85;
+    width:100%; height:100%; position: absolute;
+    background-color: #F0EAF6; 
+  }
+}
+.background-wrap{
+  position: fixed; width:100%; height: 100vh; min-height:1000px;
+  overflow: hidden; background-color: #D7D4DD; z-index: -2;
+  .circle{
+    display: block; position: absolute; border-radius: 50%;
+    &.circle-1{
+      width:500px; height:500px; top:-100px; right:-80px;
+      background-color: #9D6EB9;
+    }
+    &.circle-2{
+      width:1100px; height:1100px; top:300px; left:-200px;
+      background-color: #9D6EB9;
+    }
+  }
+}
+
+@keyframes circleMotion1 {
+  0%{ transform: scale(1); }
+  50%{ transform: scale(1.2); }
+  100%{ transform: scale(1); }
+}
+/*----------------*/
+
+.nav{
+  position: fixed; width: 86px; height:100%; 
+  left:0; top:0; background-color: #533383; z-index: 9000;
+  display: flex; flex-direction: column;
+  .nav-btn-item{
+    width:100%; height: 76px; text-align: center;
+    display: flex; justify-content: center; align-items: center;
+    &.btn-burger{
+      background-color: #00AEE5; height:86px;
+    }
+  }
+}
+
+.header{
+  width: 100%; position: absolute; display: flex; justify-content: space-between;
+  padding: 20px 32px; align-items: center;
+  >.input{
+    width:320px;
+  }
+  >.right-block{
+    width: 288px; height: 48px;
+  }
+}
+
+.left-block{
+  position: fixed; width:400px; height:100%; left:0; top:0; overflow: hidden;
+  background-color: #391960;
+  >.motion{
+    position: absolute; bottom: 0; width: 100%; z-index: -1;
+  }
+  .profile-block{
+    position: relative; width: 400px; padding: 0;
+  }
+  .btns-wrap{
+    width:100%; padding: 16px 16px; z-index: 10;
+    z-index: 5; display: grid;
+    grid-template-columns: repeat(4, 25%);
+    >.btn{
+      width: 82px; height: 82px; border-radius: 12px; margin: 0 4px;
+      display: flex; justify-content: center; align-items: center;
+      background-color: rgba(0,0,0,0.0);
+      flex-direction: column;
+      >img{
+        width:24px;
+      }
+      >span{
+        display: block; width:100%; color:white; font-size: 13px;
+        margin-top: 6px; opacity: 0.7;
+      }
+    }
+  }
+  .left-copy{
+    width:260px; position: absolute; margin: 0 auto; bottom:200px;
+    left:0; right:0;
+  }
+  .left-copy-back{
+    display: block; width:100%; height:350px; position: absolute; left:0; bottom: 0;
+    z-index: -1;
+    &::before{
+      content:''; display: block; position: absolute; width: 80px; height: 80px;
+      border-radius: 50%; background-color: #2a0f52; left: 60px;
+      animation: updown1 3s; animation-iteration-count: infinite;
+    }
+  }  
+}
+@keyframes updown1 {
+  0%{ transform: translateY(10px); }
+  50%{ transform: translateY(30px); }
+  100%{ transform: translateY(10px); }
+}
+/*----------------*/
+
+.con-wrap{
+  position: relative; width: 1188px; margin: 0 auto;
+  padding: 160px 0;
+  .con-group{
+    width:100%; padding: 80px 0;
+  }
+  .con-group-1{
+    width:100%; display: flex; flex-wrap:wrap;
+    .con-1{ width:100%; margin-bottom: 24px;}
+    .con-row{
+      width:100%; display: flex; justify-content: space-between;
+      .banner-wrap{
+        position: relative; width: 380px; height: 400px; 
+        overflow: hidden; border-radius: 12px;
+        background-color: #001030;
+        .swiper-pagination{
+          bottom: 18px;
+        }
+        .swiper-pagination-bullet{
+          border-radius: 8px;
+          background-color: rgba(255,255,255,0.7);
+          &.swiper-pagination-bullet-active{
+            width: 30px;
+            background-color: rgba(255,255,255,0.9);
+          }
+        }
+        .swiper-slide{
+          img{ max-width: 100%;}
+        }
+      }
+    }
+  }
+  .con-wide{
+    width: 784px;
+  }
+}
+
+/*--------------*/
+

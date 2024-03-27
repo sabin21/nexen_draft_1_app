@@ -1,0 +1,80 @@
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+import '../public/css/normalize.css';
+import '../public/css/draft_common.scss';
+import '../public/css/draft_2_0.scss';
+
+import Swiper from 'swiper';
+import { Autoplay, Pagination } from 'swiper/modules';
+Swiper.use([Autoplay, Pagination]);
+//---------------------------
+
+const mainBanner = new Swiper('.banner-wrap', {
+  speed: 400,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+
+// var TxtType = function(el, toRotate, period) {
+//   this.toRotate = toRotate;
+//   this.el = el;
+//   this.loopNum = 0;
+//   this.period = parseInt(period, 10) || 2000;
+//   this.txt = '';
+//   this.tick();
+//   this.isDeleting = false;
+// };
+
+// TxtType.prototype.tick = function() {
+//   var i = this.loopNum % this.toRotate.length;
+//   var fullTxt = this.toRotate[i];
+
+//   if (this.isDeleting) {
+//   this.txt = fullTxt.substring(0, this.txt.length - 1);
+//   } else {
+//   this.txt = fullTxt.substring(0, this.txt.length + 1);
+//   }
+
+//   this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+//   var that = this;
+//   var delta = 100;
+
+//   if (this.isDeleting) { delta /= 2; }
+
+//   if (!this.isDeleting && this.txt === fullTxt) {
+//   delta = this.period;
+//   this.isDeleting = true;
+//   } else if (this.isDeleting && this.txt === '') {
+//   this.isDeleting = false;
+//   this.loopNum++;
+//   delta = 500;
+//   }
+
+//   setTimeout(function() {
+//   that.tick();
+//   }, delta);
+// };
+
+// window.onload = function() {
+//   var elements = document.getElementsByClassName('typewrite');
+//   for (var i=0; i<elements.length; i++) {
+//       var toRotate = elements[i].getAttribute('data-type');
+//       var period = elements[i].getAttribute('data-period');
+//       if (toRotate) {
+//         new TxtType(elements[i], JSON.parse(toRotate), period);
+//       }
+//   }
+//   // INJECT CSS
+//   // var css = document.createElement("style");
+//   // css.type = "text/css";
+//   // css.innerHTML = ".typewrite > .wrap { border-right: 1px solid rgba(255,255,255,0.5); margin-left:10px;}";
+//   // document.body.appendChild(css);
+// };

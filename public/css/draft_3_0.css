@@ -1,0 +1,48 @@
+html{
+  font-size: calc(100vw / 1920 * 10);
+}
+.main {
+  @apply w-full overflow-x-hidden ;
+}
+.hero-canvas{
+  @apply fixed w-full h-screen top-0 left-0 overflow-hidden;
+  canvas{ @apply fixed w-full h-screen z-[1]; }
+  .hero-back-wrap{
+    @apply absolute w-full h-screen top-0 left-0 z-0 ;
+    .back-shape {
+      @apply absolute w-[40%] h-[60vh] top-0 left-[60vw] bg-[#E02B41];
+    }
+  }
+}
+.hero-overlay{
+  @apply absolute w-full h-screen top-0 left-0 ;
+}
+.home-wrap{
+  @apply relative w-full flex flex-col overflow-hidden z-[2];
+  .home-scene{
+    @apply relative w-full h-screen flex justify-center items-center;
+    .headline-wrap{
+      @apply block absolute w-[60%] left-[15%] top-[30%];
+      h2{
+        @apply text-[4.25vw] font-extrabold leading-[1.2em] tracking-[-0.05em];
+        &.eng{
+          @apply text-[5vw] ;
+        }
+      }
+    }
+    .trigger {
+      @apply block absolute w-4 h-[100px] top-[calc(50%-50px)] right-0 border border-red-500 ;
+    }
+    .con-wrap{
+      @apply relative w-[80%] h-[60%] border border-red-500 ;
+    }
+  }
+}
+
+/*---------------*/
+#sub-canvas {
+  @apply relative w-full h-screen z-50 ;
+}
+
+
+
