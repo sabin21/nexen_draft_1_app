@@ -1,0 +1,28 @@
+:root {
+  --btn-radius-tiny: 4px;
+  --btn-radius-normal: 6px;
+  --btn-radius-full-normal: 24px;
+}
+
+.btn{
+  display: block; border: none; display: flex; align-items: center;
+  padding: 12px 20px; border-radius: var(--btn-radius-normal); font-weight: bold;
+  color:var(--gray-800); letter-spacing: -0.03em; background-color: white;
+  line-height: 1.5em;
+  >.text{ padding:0 4px; }
+  // >.icon-wrap{ padding: 0 4px; }
+  &.border{
+    border: 1px solid var(--gray-300);
+  }
+  &.rounded{
+    border-radius: var(--btn-radius-full-normal);
+  }
+  &.small{
+    padding: 6px 12px; font-size:14px;
+    >.text{ padding:0 2px; }
+    >.icon-wrap{
+      padding: 0; 
+      transform: scale(0.66675);
+    }
+  }
+}

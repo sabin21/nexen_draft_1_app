@@ -437,6 +437,15 @@ video {
 .w-full{
   width: 100%;
 }
+.gap-4{
+  gap: 1rem;
+}
+.rounded{
+  border-radius: 0.25rem;
+}
+.border{
+  border-width: 1px;
+}
 .border-b{
   border-bottom-width: 1px;
 }

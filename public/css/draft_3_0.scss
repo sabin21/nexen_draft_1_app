@@ -1,3 +1,6 @@
+body{
+  background-color: #E6EBED;
+}
 .main{
   position: relative; width:calc(100% - 400px); height: 100%; min-height: 1200px; 
   margin-left: 400px;
@@ -59,7 +62,10 @@
     width:320px;
   }
   >.right-block{
-    width: 288px; height: 48px;
+    width: 228px; height: 48px;
+  }
+  &.header-depth{
+    width:calc(100% - 100px); right:0;
   }
 }
 
@@ -74,7 +80,7 @@
   }
   .btns-wrap{
     width:100%; padding: 16px 16px; z-index: 10;
-    z-index: 5; display: grid;
+    z-index: 900; display: grid;
     grid-template-columns: repeat(4, 25%);
     >.btn{
       width: 82px; height: 82px; border-radius: 12px; margin: 0 4px;
@@ -87,6 +93,30 @@
       >span{
         display: block; width:100%; color:white; font-size: 13px;
         margin-top: 6px; opacity: 0.7;
+      }
+      &.btn-line-1{
+        &:hover{
+          ~#nav-submenu-1{
+            height: 410px;
+          }
+        }
+      }
+      &.btn-line-2{
+        &:hover{
+          ~#nav-submenu-2{
+            height: 410px;
+          }
+        }
+      }
+      
+    }
+    .submenu-wrap{
+      position:absolute; width:100%; 
+      left:0; top: 300px; z-index: 900; overflow: hidden;
+      height:0; transition: height 0.2s;
+      >img{ max-width: 100%;}
+      &#nav-submenu-2{
+        top: 380px;
       }
     }
   }
@@ -148,5 +178,17 @@
   }
 }
 
-/*--------------*/
+/*----------------*/
+.depth-nav{
+  position: fixed; width:86px; height:100vh; min-height: 800px;
+  left:0; top:0; background-color: #391960; z-index: 9900;
+  >img{ max-width: 100%;}
+}
+.depth-main{
+  position: relative; width:calc(100% - 86px); height:100%; padding: 120px 0 120px 0;
+  left: 86px; text-align: center; 
+  .depth-full-img{
+    position: absolute; width: 1760px; margin:auto; left:0; right:0; padding-bottom: 120px;
+  }
+}
 

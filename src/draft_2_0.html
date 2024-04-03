@@ -10,22 +10,33 @@
 
 <body>
 
-<header class="header">
-  <img src="./img/logo_white.svg" alt="">
+<button class="btn-burger">
+  <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1 1H17" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <path d="M1 8H17" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <path d="M1 15H17" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  </svg> 
+</button>
+
+<header class="header home">
+  <div class="header-left-wrap">
+    <img src="./img/logo_white.svg" class="logo">
+  </div>
   <img src="./img/draft_2/header_right.png" class="header-right">
 </header>
 
 <main class="main">
   <div class="inner-wrap">
-    <img src="./img/draft_2/header_nav.png" class="header-nav">
+    <div class="header-nav-wrap">
+      <a href="./depth_2.html">
+        <img src="./img/draft_2/header_nav.png" class="header-nav">
+        <span class="header-submenu-wrap">
+          <img src="./img/draft_2/submenu_1.png" class="header-submenu">
+        </span>
+      </a>
+    </div>
+    
     <div class="hero-wrap">
-      <!-- <div class="hero-copy-wrap">
-        <h1>
-          <span class="typewrite" data-period="2000" data-type='[ "Brand Value Up!","더 많은 고객에게 프리미엄 제품 경험 제공" ]'>
-            <span class="blink-line"></span>
-          </span>
-        </h1>
-      </div> -->
       <div class="hero-copy-row">
         <span class="row-wrap">
           <h1 class="copy-1">Brand Value Up!</h1>
@@ -34,13 +45,14 @@
           <h1 class="copy-2">더 많은 고객에게 프리미엄 제품 경험 제공</h1>
         </span>
       </div>
-      <!-- <img src="./img/draft_2/hero_notice.png" class="hero-notice"> -->
     </div>
   </div>
   
   <div class="hero-info-wrap">
     <div class="inner-wrap">
-      <img src="./img/draft_2/info_full.png" class="info-full">
+      <a href="./depth_2.html">
+        <img src="./img/draft_2/info_full.png" class="info-full">
+      </a>
     </div>
   </div>
 

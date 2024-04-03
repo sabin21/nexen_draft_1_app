@@ -2,11 +2,22 @@ body{
   background-color: #111827;
 }
 .header{
-  width:100%; position: absolute; z-index: 100; display: flex; 
-  justify-content: space-between; padding: 30px 30px 0 40px;
-  .header-right{
-    width: 530px;
+  width:calc(100% - 110px); position: absolute; z-index: 100; display: flex; 
+  justify-content: space-between; padding: 20px 30px 0 19px; right:0;
+  &.home{
+    width:calc(100% - 72px); 
   }
+  .header-left-wrap{
+    display: flex; 
+  }
+  .header-right{
+    width: 470px;
+  }
+}
+.btn-burger{
+  position: absolute; width:48px; height:48px; border-radius: 50%;
+  background-color: #8332E9; top: 20px; left: 19px; z-index: 9900;
+  display: flex; justify-content: center; align-items: center;
 }
 .main{
   position: relative; width: 100%;
@@ -17,9 +28,29 @@ body{
     width: 100%; display: flex; justify-content: space-between;
     align-items: center; 
   }
+  .header-nav-wrap{
+    position: relative; width:100%; z-index: 500;
+    .header-submenu-wrap{
+      display: block; position: absolute; width: 100%; overflow: hidden;
+      height: 0; transition: height 0.25s;
+      &.active{
+        height: 162px;
+      }
+      >.header-submenu{
+        position: relative; max-width: 100%;
+      }
+    }
+    
+  }
 }
 .header-nav{
-  padding-top: 150px; width:1165px;
+  padding-top: 150px; width:1165px; cursor: pointer;
+  &:hover{
+      ~.header-submenu-wrap{
+        height: 162px;
+      }
+    
+  }
 }
 .hero-wrap{
   width:100%; display: flex; padding: 70px 0;
@@ -119,4 +150,18 @@ body{
   10%{ transform: translateY(0);}
   90%{ transform: translateY(0);}
   100%{ transform: translateY(-100%);}
+}
+
+/*----------------*/
+.depth-nav{
+  position: fixed; width:86px; height:100vh; min-height: 800px;
+  left:0; top:0; background-color: #8332E9; z-index: 9900;
+  >img{ max-width: 100%;}
+}
+.depth-main{
+  position: relative; width:calc(100% - 86px); height:100%; padding: 120px 0 120px 0;
+  left: 86px; text-align: center; 
+  .depth-full-img{
+    position: absolute; width: 1760px; margin:auto; left:0; right:0; padding-bottom: 120px;
+  }
 }
