@@ -428,6 +428,12 @@ video {
 .fixed{
   position: fixed;
 }
+.absolute{
+  position: absolute;
+}
+.block{
+  display: block;
+}
 .flex{
   display: flex;
 }

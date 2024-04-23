@@ -158,6 +158,28 @@ body{
 }
 /*--------------*/
 
+.popup-wrap{
+  position: relative; width:100%;
+  >.popup-inner{
+    position: relative; width:100%; max-width: 1400px; margin: 0 auto;
+    padding: 0px 0px 50px 0px;
+    img{
+      max-width: 100%;
+    }
+  }
+  &.draft-2-popup{
+    background-color: #111827;
+  }
+}
+.btn-type1-popup-close{
+  left: auto; right: 24px;
+  &.btn-close {
+    left: auto;
+  }
+}
+
+/*--------------*/
+
 :root {
   --color-bg1: rgb(213, 179, 231);
   --color-bg2: rgb(208, 200, 222);
