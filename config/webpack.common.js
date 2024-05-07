@@ -9,8 +9,8 @@ const pages = [
   "type1_write_mail","type1_write_notice",
   "type2_write_mail","type2_write_notice",
   "type3_write_mail","type3_write_notice",
-  "template_nav",
-  "index","draft_list"
+  "preview_1","preview_2","preview_3",
+  "index","draft_list","draft_list_2"
 ]
 
 module.exports = {
