@@ -4,8 +4,12 @@
   background-color: var(--gray-100);
   display: flex; justify-content: center; align-items: center; flex-direction: column;
   .desc-info{
-    font-size:18px; font-weight: bold; width:100%; text-align: center;
-    margin:0;
+    font-size:18px; font-weight: bold; width:100%; max-width: 1300px; display: flex;
+    margin:0; justify-content: space-between;
+    >a{
+      display: block; padding: 8px 20px; border: 1px solid gray; border-radius: 6px;
+      font-size: 14px;
+    }
   }
 }
 
