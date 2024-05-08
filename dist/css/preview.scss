@@ -1,9 +1,14 @@
 
 .preview-wrap{
-  position: relative; width:100%; min-width:1400px; height:100vh; min-height: 800px;
+  position: relative; width:100%; min-width:1400px; height:100vh; min-height: 700px;
   background-color: var(--gray-100);
-  display: flex; justify-content: center; align-items: center;
+  display: flex; justify-content: center; align-items: center; flex-direction: column;
+  .desc-info{
+    font-size:18px; font-weight: bold; width:100%; text-align: center;
+    margin:0;
+  }
 }
+
 .preview-swiper{
   width: 100%; height:800px; overflow: hidden;
   .swiper-slide{
