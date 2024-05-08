@@ -5,7 +5,7 @@
   display: flex; justify-content: center; align-items: center; flex-direction: column;
   .desc-info{
     font-size:18px; font-weight: bold; width:100%; max-width: 1300px; display: flex;
-    margin:0; justify-content: space-between;
+    margin:0; justify-content: space-between; padding: 40px 0;
     >a{
       display: block; padding: 8px 20px; border: 1px solid gray; border-radius: 6px;
       font-size: 14px;
@@ -14,13 +14,18 @@
 }
 
 .preview-swiper{
-  width: 100%; height:800px; overflow: hidden;
+  width: 100%; height:100%; overflow: hidden;
   .swiper-slide{
-    position: relative; width:100%; height: 674px; overflow: hidden;
+    position: relative; width:100%; height: 100%; overflow: hidden;
     margin: auto; text-align: center;
     .slide-inner{
-      position: relative; width:1330px; height: 674px; overflow-y: scroll; margin: 0 auto;
-      >img{ max-width: 1300px; position: relative; margin: 0 auto; }
+      position: relative; width:calc(100% - 140px); height: 100%; overflow-y: scroll; margin: 0 auto;
+      >img{ 
+        max-width: 100%; position: relative; margin: 0 auto;
+        &.small-cut{
+          max-width: 900px;
+        }
+      }
     }
     
   }
